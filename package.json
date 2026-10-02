@@ -9,7 +9,8 @@
     "lint": "oxlint",
     "test": "vitest run",
     "preview": "vite preview",
-    "setup:firebase": "node setup-firebase.js"
+    "setup:firebase": "node setup-firebase.js",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name pulse-app"
   },
   "dependencies": {
     "firebase": "^12.19.0",
