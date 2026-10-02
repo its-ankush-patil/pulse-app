@@ -1,0 +1,104 @@
+.modal-content.leaderboard-modal {
+  max-width: 500px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 0.5rem;
+}
+
+/* Custom scrollbar for leaderboard */
+.leaderboard-list::-webkit-scrollbar {
+  width: 6px;
+}
+.leaderboard-list::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 10px;
+}
+
+.leaderboard-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.leaderboard-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(5px);
+}
+
+.leaderboard-row.is-me {
+  background: rgba(45, 212, 191, 0.15);
+  border-color: var(--accent-1);
+  box-shadow: 0 0 20px -5px rgba(45, 212, 191, 0.3);
+}
+
+.rank-col {
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+
+.rank-number {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.leader-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--bg-color);
+}
+
+.leader-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.leader-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.me-badge {
+  background: var(--accent-1);
+  color: white;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.leader-score {
+  font-weight: 800;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
